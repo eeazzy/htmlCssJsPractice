@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>상세설명 상품목록</title>
+    <style>
+        body{
+            color: #222;
+            line-height: 1.5em;
+            margin: 0;
+        }
+        a{
+            color: #000;
+            text-decoration: none;
+            background-color: yellow;
+            padding: 7px;
+            border-radius: 3px;
+        }
+        a:hover{
+            background-color: #fff;
+        }
+        .items{
+            text-align: center;
+        }
+        .item{
+            display: inline-block;
+            width: 300px; height: 300px;
+            position: relative;
+            border: 1px solid #ddd;
+            margin: 10px;
+        }
+        .caption{
+            width: 300px; height: 300px;
+            background-color: #000000ba;
+            position: absolute;
+            top: 0; left: 0;
+            color: #fff;
+            padding: 20px;
+            box-sizing: border-box;
+            opacity: 0;
+            transition: 0.5s;
+        }
+        .item:hover .caption{
+            opacity: 1;
+        }
+        img{
+            width: 300px; height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="items">
+        <div class="item">
+            <img src="images/eazzzy.png" alt="eazzzy">
+            <div class="caption">
+                <h2>이지</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab quo voluptates consequatur dolores corporis quasi asperiores numquam voluptatem nobis reiciendis
+                </p>
+                <p>이지는 3살</p>
+                <a href="#none">view</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="items">
+        <div class="item">
+            <img src="images/eazzzy.png" alt="eazzzy">
+            <div class="caption">
+                <h2>이지</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab quo voluptates consequatur dolores corporis quasi asperiores numquam voluptatem nobis reiciendis
+                </p>
+                <p>이지는 3살</p>
+                <a href="#none">view</a>
+            </div>
+        </div>
+    </div>
+    
+    
+</body>
+</html>
