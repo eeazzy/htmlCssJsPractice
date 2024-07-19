@@ -1,0 +1,41 @@
+body{
+    line-height: 1.5em;
+    margin: 0;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.loading{
+    position: relative;
+    width: 90px; height: 90px;
+}
+.loading span{
+    position: absolute;
+    top: 0; left: 0;
+    width: 30px; height: 30px;
+    background-color: yellowgreen;
+    animation: loading 1.5s infinite;
+}
+.loading span:nth-child(2){
+    animation-delay: 0.8s;
+}
+
+@keyframes loading{
+    0% ,100%{
+        top: 0; left: 0;
+    }
+    25%{ /* 안쪽으로 이동시키기 위해 자기자신 값만큼 빼줌 */
+        top: 0; left: calc(100% - 30px); /* right로 하면 안된다 left로 해놔서*/
+        background-color: lavender;
+    }
+    50%{
+        top: calc(100% - 30px); left: calc(100% - 30px);
+        background-color: lightcoral;
+    }
+    75%{
+        top: calc(100% - 30px); left: 0;
+        background-color: lightblue;
+    }
+}
