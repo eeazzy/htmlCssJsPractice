@@ -1,0 +1,81 @@
+body{
+    line-height: 1.5em;
+    margin: 0;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #333;
+}
+.container{
+    display: flex;
+    
+}
+.square{
+    width: 400px; height: 400px;
+    position: relative;
+    margin: 50px;
+}
+.square span{
+    position: absolute;
+    width: 100%; height: 100%;
+    border: 1px solid #fff;
+    border-radius: 40% 60% 65% 30% / 65% 30% 63% 45%;
+    transition: 0.5s; /* 백그라운드 컬러용 애니메이션 적용*/
+}
+.square:nth-child(1):hover span{
+    background-color: rgb(251, 13, 132);
+    border: none;
+}
+.square:nth-child(2):hover span{
+    background-color: rgb(158, 78, 187);
+    border: none;
+}
+.square:nth-child(3):hover span{
+    background-color: rgb(220, 49, 49);
+    border: none;
+}
+.square span:nth-child(1){
+    animation: circle 6s linear infinite;
+}
+.square span:nth-child(2){
+    animation: circle 4s linear infinite;
+    animation-direction: reverse; /* 역방향 */
+}
+.square span:nth-child(3){
+    animation: circle 10s linear infinite;
+}
+.square:hover span:nth-child(1){ /* 직접적으로 넣으면 border도 같이 투명해짐*/
+    opacity: 0.3;
+}
+.square:hover span:nth-child(2){
+    opacity: 0.5;
+}
+.square:hover span:nth-child(3){
+    opacity: 0.8;
+}
+
+.square div{
+    position: absolute;
+    top: 50%; left: 50%; transform: translate(-50%, -50%);
+    width: 70%;
+    text-align: center;
+    color: #fff;
+}
+.square div a{
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 40% 35% 50% 45% / 65% 55% 38% 42%;
+    padding: 8px;
+}
+
+@keyframes circle {
+    0% {
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
