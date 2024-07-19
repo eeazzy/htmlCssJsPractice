@@ -35,3 +35,17 @@ $('.toggle').click(function(){
 })
 
 //숫자는 ms
+
+
+//.클래스이름 하면 안된다 div안에 class="active"를 넣어줌
+$('.add').click(function(){
+    $('.container div').addClass('active')
+})
+
+$('.remove').click(function(){
+    $('.container div').removeClass('active')
+})
+
+$('.toggle2').click(function(){
+    $('.container div').toggleClass('active')
+})

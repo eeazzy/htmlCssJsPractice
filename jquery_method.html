@@ -16,6 +16,7 @@
         display: inline-block;
         text-align: center;
         border-radius: 5px;
+        margin-top: 5px;
     }
     .container div{
         background-color: skyblue;
@@ -24,7 +25,10 @@
         margin-top: 10px;
         text-align: center;
         line-height: 300px;
-        display: none;
+        /* display: none; */
+    }
+    .container div.active{
+      background-color: pink;
     }
   </style>
 </head>
@@ -34,6 +38,9 @@
     <a class="show" href="#none">보이기</a>
     <a class="hide" href="#none">감추기</a>
     <a class="toggle" href="#none">토글</a>
+    <a class="add" href="#none">넣기</a>
+    <a class="remove" href="#none">빼기</a>
+    <a class="toggle2" href="#none">토글2</a>
     <div>BOX</div>
   </div>
 
