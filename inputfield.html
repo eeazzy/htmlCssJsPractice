@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <title> 폰트어썸으로 입력필드 꾸미기 </title>
+    <style>
+        /* Fontawesome 4.7 */
+        @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+        body{
+            line-height: 1.5em;
+            font-weight: 300;
+            color: #000;
+            background-color: #fff;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        a{
+            color: #000;
+            text-decoration: none;
+        }
+        .item{
+            width: 300px;
+            margin-bottom: 10px;
+            position: relative;
+        }
+        .item input{
+            border: 1px solid lightgrey;
+            height: 40px; width: inherit;
+            padding: 10px;
+            border-radius: 5px;
+            box-sizing: border-box;
+            padding-left: 40px;
+            outline: none;
+            transition: 0.3s;
+        }
+        .item input:focus{
+            border: 1px solid palevioletred;
+            box-shadow: 0 0 5px palevioletred;
+        }
+        .item input:focus + .fa{
+            color: #000;
+        }
+        .item .fa{
+            position: absolute;
+            top: 0; left: 0;
+            color: palevioletred;
+            font-size: 24px;
+            width: 40px; height: 40px;
+            text-align: center;
+            line-height: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <form class="info">
+        <div class="item">
+            <input type="text" placeholder="이름">
+            <i class="fa fa-user"></i>
+        </div>
+        <div class="item">
+            <input type="email" placeholder="이메일">
+            <i class="fa fa-envelope"></i>
+        </div>
+        <div class="item">
+            <input type="tel" placeholder="전화번호">
+            <i class="fa fa-phone"></i>
+        </div>
+    </form>
+    
+</body>
+</html>
