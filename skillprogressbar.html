@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <title> 프로그래스바 만들기 </title>
+    <style>
+        /* Fontawesome 4.7 */
+        @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+        body{
+            line-height: 1.5em;
+            font-weight: 300;
+            color: #000;
+            background-color: #fff;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        a{
+            color: #000;
+            text-decoration: none;
+        }
+        .skill{
+            width: 500px;
+            padding: 20px;
+            background-color: lightblue;
+            border-radius: 10px;
+            box-shadow: 0 0 10px lightblue;
+            text-align: center;
+        }
+        .item{
+
+        }
+        .item p{
+            overflow: hidden;
+            margin-bottom: 0;
+        }
+        .item p span:nth-child(1){
+            float: left;
+        }
+        .item p span:nth-child(2){
+            float: right;
+        }
+        .progress{
+            border: 2px solid #fff;
+            padding: 5px;
+            border-radius: 3px;
+        }
+        .level{
+            height: 10px;
+            background: linear-gradient(90deg, lightpink, hotpink, yellow);
+            animation: ani 1s;
+        }
+
+        @keyframes ani{
+            0%{
+                width: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="skill">
+        <h1>소프트웨어 스킬</h1>
+        <div class="item">
+            <p>
+                <span>java</span>
+                <span>90%</span>
+            </p>
+            <div class="progress">
+                <div class="level" style="width: 90%"></div>
+            </div>
+        </div>
+        <div class="item">
+            <p>
+                <span>c</span>
+                <span>95%</span>
+            </p>
+            <div class="progress">
+                <div class="level" style="width: 95%"></div>
+            </div>
+        </div>
+        <div class="item">
+            <p>
+                <span>html</span>
+                <span>65%</span>
+            </p>
+            <div class="progress">
+                <div class="level" style="width: 65%"></div>
+            </div>
+        </div>
+        <div class="item">
+            <p>
+                <span>swift</span>
+                <span>75%</span>
+            </p>
+            <div class="progress">
+                <div class="level" style="width: 75%"></div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
