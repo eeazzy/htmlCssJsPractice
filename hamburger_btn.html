@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <title> 햄버거버튼 만들기 </title>
+    <style>
+        /* Fontawesome 4.7 */
+        @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+        body{
+            line-height: 1.5em;
+            font-weight: 300;
+            color: #000;
+            background-color: #fff;
+            margin: 0;
+             display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        a{
+            color: #000;
+            text-decoration: none;
+        }
+        input[id=trigger]{
+            display: none;
+        }
+        label[for=trigger]{
+            display: block;
+            width: 40px; height: 30px;
+            position: relative;
+            cursor: pointer;
+        }
+        label[for=trigger] span{
+            position: absolute;
+            height: 2px; width: 100%;
+            background-color: #000;
+            left: 0;
+            transition: 0.3s;
+        }
+        label[for=trigger] span:nth-child(1){
+            top: 0;
+        }
+        label[for=trigger] span:nth-child(2){
+            top: 50%;
+        }
+        label[for=trigger] span:nth-child(3){
+            top: 100%;
+        }
+        input[id=trigger]:checked + label span:nth-child(1){
+            top: 50%;
+            transform: rotate(45deg);
+        }
+        input[id=trigger]:checked + label span:nth-child(2){
+            opacity: 0;
+        }
+        input[id=trigger]:checked + label span:nth-child(3){
+            top: 50%;
+            transform: rotate(-45deg);
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="container">
+        <input type="checkbox" id="trigger">
+        <label for="trigger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+    </div>
+    
+</body>
+</html>
