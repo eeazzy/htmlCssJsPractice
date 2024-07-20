@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <title> 오버한 메뉴 말고 나머지는 흐려지는 애니메이션</title>
+    <style>
+        /* Fontawesome 4.7 */
+        @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+        body{
+            line-height: 1.5em;
+            font-weight: 300;
+            color: #222;
+            background-color: palevioletred;
+            margin: 0;
+        }
+        a{
+            color: #222;
+            text-decoration: none;
+        }
+        .gnb{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 50px;
+        }
+        .gnb a{
+            display: block;
+            font-size: 40px;
+            margin: 30px 0;
+            color: #fff;
+            transition: 0.5s;
+        }
+        .gnb:hover a{ /* 순서도 중요하다 */
+            opacity: 0.3;
+        }
+        .gnb a:hover{
+            opacity: 1;
+        }
+        .gnb a:before{
+            content: '\f105';
+            font-family: fontawesome;
+            margin-right: 10px;
+            opacity: 0;
+        }
+        .gnb a:hover:before{
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="gnb">
+        <a href="#none">첫번째</a>
+        <a href="#none">두번째</a>
+        <a href="#none">세번째</a>
+        <a href="#none">네번째</a>
+        <a href="#none">다섯번째</a>
+    </div>
+    
+</body>
+</html>
