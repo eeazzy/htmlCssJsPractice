@@ -29,8 +29,14 @@
             box-shadow: 0 0 10px lightblue;
             text-align: center;
         }
-        .item{
-
+        .skill .item:nth-of-type(2) .level{
+            animation-delay: 0.2s;
+        }
+        .skill .item:nth-of-type(3) .level{
+            animation-delay: 0.4s;
+        }
+        .skill .item:nth-of-type(4) .level{
+            animation-delay: 0.6s;
         }
         .item p{
             overflow: hidden;
@@ -51,6 +57,7 @@
             height: 10px;
             background: linear-gradient(90deg, lightpink, hotpink, yellow);
             animation: ani 1s;
+            animation-fill-mode: both;
         }
 
         @keyframes ani{
