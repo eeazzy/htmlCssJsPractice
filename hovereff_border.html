@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <title> hover effect - border </title>
+    <style>
+        /* Fontawesome 4.7 */
+        @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+        body{
+            line-height: 1.5em;
+            font-weight: 300;
+            color: #000;
+            background-color: #fff;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        a{
+            color: #000;
+            text-decoration: none;
+        }
+        .gnb{
+        }
+        .gnb a{
+            position: relative;
+            padding-bottom: 10px;
+            margin: 10px;
+        }
+        .gnb a::before{
+            position: absolute;
+            content: '';
+            background-color: palevioletred;
+            transition: 0.3s;
+        }
+        .gnb a:nth-child(1):before{
+            width: 0;
+            height: 2px;
+            bottom: 0;
+        }
+        .gnb a:nth-child(2):before{
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            right: 0;
+        }
+        .gnb a:nth-child(3):before{
+            width: 4px;
+            height: 4px;
+            bottom: 0;
+            left: 0;
+        }
+        .gnb a:nth-child(4):before{
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .gnb a:nth-child(5):before{
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .gnb a:hover:nth-child(1):before{
+            width: 100%;
+        }
+        .gnb a:hover:nth-child(2):before{
+            width: 100%;
+        }
+        .gnb a:hover:nth-child(3):before{
+            left: calc(100% - 4px);
+        }
+        .gnb a:hover:nth-child(4):before{
+            width: 100%;
+        }
+        .gnb a:hover:nth-child(5):before{
+            width: 0;
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="gnb">
+        <a href="#none">코딩 연습 중 공부 중</a>
+        <a href="#none">코딩 연습 중 공부 중</a>
+        <a href="#none">코딩 연습 중 공부 중</a>
+        <a href="#none">코딩 연습 중 공부 중</a>
+        <a href="#none">코딩 연습 중 공부 중</a>
+    </div>
+    
+</body>
+</html>
