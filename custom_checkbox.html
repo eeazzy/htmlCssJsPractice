@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <title> 커스텀 체크박스 </title>
+    <style>
+        /* Fontawesome 4.7 */
+        @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+        body{
+            line-height: 1.5em;
+            font-weight: 300;
+            color: #000;
+            background-color: #fff;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        a{
+            color: #000;
+            text-decoration: none;
+        }
+        .custom{
+            margin-bottom: 20px;
+        }
+        .custom input[type=checkbox]{
+            display: none;
+        }
+        .custom label em{
+            width: 18px; height: 18px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 5px;
+            background: url(images/checkbox-02.png) no-repeat;
+            background-position: left center; /* 기본값 */
+        }
+        .custom input[type=checkbox]:checked + label em{
+            background-position: right center;
+        }
+        .grade input[type=radio]{
+            display: none;
+        }
+        .grade label em{
+            display: inline-block;
+            width: 18px; height: 18px;
+            vertical-align: middle;
+            margin-right: 5px;
+            margin-left: 10px;
+            background: url(images/radio-01.png) no-repeat;
+            background-position: left center;
+        }
+        .grade input[type=radio]:checked + label em{
+            background-position: right center;
+        }
+        .grade input[type=radio]:checked + label{
+            color: hotpink;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="con">
+        <div class="custom">
+            <input type="checkbox" id="agree"> <label for="agree"><em></em>동의?</label>
+        </div> 
+        <div class="grade">
+            <input type="radio" name="grade" id="g1"><label for="g1"><em></em>A</label> 
+            <input type="radio" name="grade" id="g2"><label for="g2"><em></em>B</label> 
+            <input type="radio" name="grade" id="g3"><label for="g3"><em></em>C</label> 
+            <input type="radio" name="grade" id="g4"><label for="g4"><em></em>F</label> 
+        </div>
+    </div>
+</body>
+</html>
