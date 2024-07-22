@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <title> 커스텀 체크박스2 </title>
+    <style>
+        /* Fontawesome 4.7 */
+        @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+        body{
+            line-height: 1.5em;
+            font-weight: 300;
+            color: #000;
+            background-color: #fff;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        a{
+            color: #000;
+            text-decoration: none;
+        }
+        form input[type=checkbox]{
+            display: none;
+        }
+        form label{
+            display: block;
+        }
+        form label::before{
+            content: '\f00c';
+            font-family: fontawesome;
+            border: 1px solid lightcoral;
+            color: transparent;
+            width: 16px; height: 16px;
+            border-radius: 3px;
+            margin-right: 5px;
+            vertical-align: middle;
+            display: inline-block;
+            text-align: center;
+            line-height: 16px;
+            box-sizing: border-box;
+            transition: 0.2s;
+        }
+        input[type=checkbox]:checked + label::before{
+            color: #fff;
+            background-color: lightcoral;
+            border: none;
+        }
+        input[type=checkbox] + label:active::before{
+            transform: scale(0);
+        }
+    </style>
+</head>
+<body>
+   
+    <form>
+        <input type="checkbox" id="c1">
+        <label for="c1">HTML</label>
+        <input type="checkbox" id="c2">
+        <label for="c2">CSS</label>
+        <input type="checkbox" id="c3">
+        <label for="c3">jQuery</label>
+        <input type="checkbox" id="c4">
+        <label for="c4">UIKit</label>
+    </form>
+
+</body>
+</html>
