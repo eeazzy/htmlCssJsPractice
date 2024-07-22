@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <title> hover effect - content attr </title>
+    <style>
+        /* Fontawesome 4.7 */
+        @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+        body{
+            line-height: 1.5em;
+            font-weight: 300;
+            color: #000;
+            background-color: #fff;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        a{
+            color: #000;
+            text-decoration: none;
+        }
+        .gnb a{
+            text-transform: uppercase;
+            position: relative;
+            display: inline-block;
+            width: 450px;
+            text-align: center;
+            padding: 15px;
+            box-sizing: border-box;
+            transition: 0.3s;
+        }
+        .gnb a::before,
+        .gnb a::after{
+            content: '';
+            position: absolute;
+            width: 100%; height: 100%;
+            left: 0; top: 0;
+            background-color: rgba(0, 0, 0, 0.1);
+            border: 1px solid rgb(90, 88, 93);
+            transition: 0.3s;
+        }
+        .gnb a:hover{
+            letter-spacing: 6px;
+        }
+        .gnb a:hover::before{
+            transform: rotate(45deg);
+            background-color: transparent;
+        }
+        .gnb a:hover::after{
+            transform: rotate(-45deg);
+            background-color: transparent;
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="gnb">
+        <a href="#none">abcdefghijklmnopqrstuvwxyz</a>
+    </div>
+    
+</body>
+</html>
