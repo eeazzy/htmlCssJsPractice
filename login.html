@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <title> 로그인 화면 만들기 </title>
+    <style>
+        /* Fontawesome 4.7 */
+        @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+        body{
+            line-height: 1.5em;
+            font-weight: 300;
+            color: #000;
+            background-color: #fff;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        a{
+            color: #000;
+            text-decoration: none;
+        }
+        .login{
+            width: 800px;
+            background-color: lavender;
+            border: 1px solid lavender;
+            border-radius: 5px;
+            padding: 25px;
+            box-sizing: border-box;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+        }
+        .login span{
+            font-weight: bold;
+            display: block;
+            margin-top: 20px;
+        }
+        .login input[type=email],
+        .login input[type=password]{
+            width: 100%;
+            padding: 15px;
+            box-sizing: border-box;
+            border: 1px solid rgb(191, 191, 209);
+            border-radius: 5px;
+            transition: 0.3s;
+            outline: none;
+        }
+        .login input[type=email]::placeholder,
+        .login input[type=password]::placeholder{
+            opacity: 1;
+            transition: 0.3s;
+        }
+        .login input[type=email]:focus::placeholder,
+        .login input[type=password]:focus::placeholder{
+            opacity: 0;
+            visibility: hidden;
+        }
+        .login p{
+            overflow: hidden;
+        }
+        .login p label{
+            float: left;
+        }
+        .login p a{
+            float: right;
+        }
+        .login p a:hover{
+            text-decoration: underline;
+            color: rgb(249, 129, 169);
+        }
+        .login button{
+            background-color: lavenderblush;
+            width: 300px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 25px;
+            box-sizing: border-box;
+            transition: 0.3s;
+        }
+        .login button:hover{
+            background-color: rgb(249, 129, 169);
+            color: #fff;
+        }
+        .login input[type=email]:hover,
+        .login input[type=password]:hover{
+            border: 1px solid rgb(249, 129, 169);
+            box-shadow: 0 0 5px rgb(249, 129, 169);
+        }
+    </style>
+</head>
+<body>
+   
+    <form class="login">
+        <span>Email</span>
+        <input type="email" placeholder="이메일 입력">
+        <span>Password</span>
+        <input type="password" placeholder="비밀번호 입력">
+        <p>
+            <label>
+                <input type="checkbox">로그인 상태 유지
+            </label>
+            <a href="#none">비밀번호 찾기</a>
+        </p>
+        <button>로그인</button>
+    </form>
+
+</body>
+</html>
