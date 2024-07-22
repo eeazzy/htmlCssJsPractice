@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <title> 꽉찬 탭메뉴 </title>
+    <style>
+        /* Fontawesome 4.7 */
+        @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+        body{
+            line-height: 1.5em;
+            font-weight: 300;
+            color: #000;
+            background-color: #fff;
+            margin: 0;
+            /* display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; */
+        }
+        a{
+            color: #000;
+            text-decoration: none;
+        }
+        .inner{}
+        input[name=tabmenu]{
+            display: none;
+        }
+        .tabs{
+            overflow: hidden;
+            position: relative;
+            height: 100vh;
+        }
+        .items{
+            height: 100vh;
+            width: 300%;
+            transition: 0.5s;
+            position: absolute;
+            top: 0; left: 0;
+        }
+        .items div{
+            height: 100vh;
+            float: left;
+            width: 33.333333333%;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .items div:nth-child(1){
+            background-color: lavender;
+        }
+        .items div:nth-child(2){
+            background-color: lightblue;
+        }
+        .items div:nth-child(3){
+            background-color: lemonchiffon;
+        }
+        .items div h1{
+            font-size: 50px;
+        }
+        .btn{
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+            /* left: 100%; 가운데 정렬 방법2
+            transform: translateX(-50%); */
+        }
+        .btn label{
+            display: inline-block;
+            height: 5px; width: 50px;
+            background-color: lightpink;
+            cursor: pointer;
+        }
+        input[id=tab1]:checked ~ .tabs .items{
+            left: 0;
+        }
+        input[id=tab2]:checked ~ .tabs .items{
+            left: -100%;
+        }
+        input[id=tab3]:checked ~ .tabs .items{
+            left: -200%;
+        }
+        input[id=tab1]:checked ~ .btn label[for=tab1],
+        input[id=tab2]:checked ~ .btn label[for=tab2],
+        input[id=tab3]:checked ~ .btn label[for=tab3]{
+            background-color: hotpink;
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="inner">
+        <input type="radio" name="tabmenu" id="tab1" checked>
+        <input type="radio" name="tabmenu" id="tab2">
+        <input type="radio" name="tabmenu" id="tab3">
+        <div class="tabs">
+            <div class="items">
+                <div>
+                    <h1>content 1</h1>
+                </div>
+                <div>
+                    <h1>content 2</h1>
+                </div>
+                <div>
+                    <h1>content 3</h1>
+                </div>
+            </div>
+        </div>
+        <div class="btn">
+            <label for="tab1"></label>
+            <label for="tab2"></label>
+            <label for="tab3"></label>
+        </div>
+    </div>
+    
+</body>
+</html>
