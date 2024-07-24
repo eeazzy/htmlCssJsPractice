@@ -1,0 +1,91 @@
+/* XEION CDN */
+@import url('http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+*{
+    box-sizing: border-box;
+}
+body{
+    line-height: 1.5em;
+    font-weight: 300;
+    color: #fff;
+    background-color: #000;
+    margin: 0;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; */
+}
+a{
+    color: #000;
+    text-decoration: none;
+}
+
+.faq{
+    height: 100vh;
+}
+.faq-inner{
+    width: 700px;
+    margin: auto;
+}
+.faq-inner h1{
+    text-align: center;
+    font-size: 50px;
+    font-weight: 500;
+}
+.accordion{
+    font-size: 20px;
+}
+.accordion .title,
+.accordion .content{
+    background-color: #303030;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+}
+.accordion .title{
+    cursor: pointer;
+}
+.accordion .title.active{
+    background-color: crimson;
+}
+.accordion .content{
+    display: none;
+}
+.accordion .title::after{
+    content: '\e9c5';
+    font-family: xeicon;
+    float: right;
+    transition: 0.3s;
+}
+.accordion .title.active::after{
+    transform: rotate(45deg);
+}
+
+.newsletter{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    margin-top: 20px;
+}
+.newsletter div{}
+.newsletter div button,
+.newsletter div input[type=email]{
+    border: none;
+    outline: none;
+    height: 60px;
+    vertical-align: middle;
+    font-size: 16px;
+}
+.newsletter div input[type=email]{
+    width: 70%;
+    padding-left: 10px;
+}
+.newsletter div button{
+    background-color: crimson;
+    color: #fff;
+    cursor: pointer;
+    width: 30%;
+}
+.newsletter div button::after{
+    content: '\e93f';
+    font-family: xeicon;
+}
